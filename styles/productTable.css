@@ -1,0 +1,65 @@
+
+.productTable {
+    overflow-x: scroll;
+}
+
+
+#aino_productList .topheader.shrinked, #aino_productList .subheader.shrinked, #aino_productList th.topheader.shrinked.even, #aino_productList th.subheader.shrinked.even {
+    background-color: #d7d7d7;
+}
+
+#aino_productList th {
+    border-style: solid;
+    border-width: 1px;
+    padding: 2px 5px 2px 5px;
+    background-color: #d7d7d7;
+}
+
+#aino_productList td {
+    border-style: solid;
+    border-width: 0.5px;
+    padding: 2px 5px 2px 5px;
+    background-color: white;
+}
+
+#aino_productList .productTable table {
+    border-collapse: collapse;
+}
+
+#aino_productList tr:hover {
+    background-color: floralwhite;
+}
+
+#aino_productList .even {
+    background-color: #7cc68d;
+}
+
+
+#aino_productList th.topheader {
+    background-color: #ffa92e;
+}
+
+#aino_productList th.subheader {
+    background-color: #fdca82;
+}
+
+#aino_productList td.taxValue.even {
+    background-color: #f8dcb5;
+}
+
+#aino_productList th.topheader.even {
+    background-color: #60a926;
+}
+
+#aino_productList th.subheader.even {
+    background-color: #a7e376;
+}
+
+#aino_productList td.taxValue.even.taxEven {
+    background-color: #edffdf;
+}
+
+#aino_productList .searchCriteria {
+    display:flex;
+}
+
