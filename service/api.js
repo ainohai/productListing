@@ -64,7 +64,6 @@ function requestWithoutBody(method, url, options = {}) {
 }
 
 function post(url, payload, options) {
-    console.log("url: " +url);
     return requestWithBody('post', url, payload, options);
 }
 
@@ -96,7 +95,6 @@ function apiCall(endpoint, options = {}) {
         fullUrl += objectIntoQueryParams(options.queryParams);
     }
 
-    console.log(fullUrl);
     return fetch(encodeURI(fullUrl), options)
         .then(status)
         .then(json)

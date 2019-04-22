@@ -3,8 +3,6 @@ import {default as ProductListItem} from './productListItem';
 import {getActiveProductCatName} from "../util/categoryUtil";
 
 const showCategory = (taxonomies, taxSelected, products) => {
-    console.log("shiw");
-    console.log(products);
     if (!taxonomies){
         return false;
     }

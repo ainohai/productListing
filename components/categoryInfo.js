@@ -5,7 +5,7 @@ const CategoryInfo = ({ categoryInfos }) => (
     <div className="categoryInfo">
         {!!categoryInfos &&
         categoryInfos.map(cat => (
-            <div className="categoryInfoItem">
+            <div className="categoryInfoItem" key={cat.title}>
                 <div className="categoryContent">
                     <h2>{cat.title}</h2>
                     <div className="content" dangerouslySetInnerHTML={{__html: DOMPurify.sanitize(cat.content)}}></div>

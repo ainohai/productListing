@@ -1,4 +1,3 @@
-import { all, call, put, takeEvery, select } from 'redux-saga/effects';
 
 // Constants - action names
 export const TOGGLE_TAXONOMY = 'wp/TOGGLE_TAXONOMY';
@@ -48,45 +47,4 @@ export default function reducer(state = initialState, action = {}) {
 export function getToggleTaxonomyAction(toggled) { return {type: TOGGLE_TAXONOMY, toggled: toggled}; }
 export function setError() {return {type:ERROR};}
 export function toggleCategoryAccordionAction(catIsOpen) {return {type:TOGGLE_CATEGORY_ACCORDION, catIsOpen:catIsOpen};
-}
-
-
-// Actions
-/*export function getProductsAction() { return {type: GET_PRODUCTS}; }
-*/
-
-//Saga Selector
-
-// Sagas
-/*function* getProductsSaga() {
-
-    console.log("In saga redux middleware");
-
-    let data;
-    try {
-        data = yield call(getProducts);
-    }
-    catch (e) {
-        //to do : Handle errors
-        console.log("Something went wrong");
-        console.log(e);
-        yield put(getProductsFailureAction(data));
-    }
-    console.log("returned from product api call");
-
-    yield put(getProductsSuccessAction(data));
-
-    yield put(getTaxonomyTermsAction());
-    yield put(getTaxonomyDataAction());
-}*/
-
-
-function* changeSagaWatch() {
-    //yield takeEvery(GET_PRODUCTS, getProductsSaga);
-}
-
-export function* settingsSagas() {
-    yield all([
-        changeSagaWatch()
-    ]);
 }

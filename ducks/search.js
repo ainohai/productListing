@@ -87,8 +87,6 @@ function* setUrlParams()  {
 
     let url = urlWithQueryParams(taxData, nameFilter);
 
-    console.log(url);
-
     history.replaceState({}, "Tuotteet", url);
 }
 

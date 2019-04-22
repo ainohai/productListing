@@ -51,7 +51,6 @@ const taxFiltersIntoQueryString = (taxFilters, nameFilter) => {
 
    Object.keys(taxFilters).forEach(taxName => queryString += addTaxFilterIntoQueryString(taxFilters[taxName], taxName));
 
-    console.log(queryString);
     return queryString;
 };
 

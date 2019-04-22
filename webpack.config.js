@@ -2,7 +2,7 @@ const path = require('path');
 require("babel-polyfill");
 
 module.exports = {
-  mode: 'development',
+  mode: 'production',
 /*  entry: ['babel-polyfill', "/home/ainohai/puutarha/sivu/wp-content/themes/haikalanpuoti/assets/js/react/hello.js"],
   output: {
     path: path.resolve(__dirname, '../'),

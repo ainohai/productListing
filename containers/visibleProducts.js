@@ -32,14 +32,7 @@ const getVisibleProducts = (products, taxFilters, taxonomyData, nameFilter) => {
     let taxFilterKeys = Object.keys(taxFilters);
     let filtered = taxonomyData;
 
-    console.log("get visible product");
-    console.log(taxFilters);
-    console.log(taxonomyData);
-    console.log(products);
-
-
     if (taxonomyData.length === 0 || !taxFilters || taxFilterKeys.length === 0) {
-        console.log("return prod");
         return products;
     }
 
