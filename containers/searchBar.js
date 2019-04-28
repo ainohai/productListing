@@ -4,7 +4,7 @@ import React from "react";
 import {bindActionCreators} from "redux";
 import TaxonomyCheckboxes from "../components/filters/taxonomyCheckboxes";
 import NameSearch from "../components/filters/nameInput";
-
+import texts from '../i18n'
 
 class SearchBar extends React.Component {
 
@@ -48,7 +48,7 @@ class SearchBar extends React.Component {
 
         return (
             <div id="searchBox">
-                <h3>Rajaa tuotteita</h3>
+                <h3>{texts.messages["search.filter"]}</h3>
             <form className="searchCriteria" onSubmit = {(e) => (e.preventDefault())}>
                 <NameSearch nameFilterChange = {(e) => {this.handleNameFilterChange(e)}}/>
                 {!!taxonomySlugs &&

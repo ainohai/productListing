@@ -1,13 +1,11 @@
 import { connect } from 'react-redux';
-import {categoryDataFetched, changeTaxonomyFilter} from '../ducks/search';
+import {changeTaxonomyFilter} from '../ducks/search';
 import React from "react";
 import {bindActionCreators} from "redux";
-import {getCategoryDataAction, selectActiveProductCatName} from "../ducks/product";
-import Drawer from 'react-motion-drawer';
-import SearchBar from "./searchBar";
+import {selectActiveProductCatName} from "../ducks/product";
 import {justUsedCategories} from "../util/categoryUtil";
 import {toggleCategoryAccordionAction} from "../ducks/settings";
-
+import texts from "../i18n";
 
 class ProductCategories extends React.Component {
 
@@ -42,7 +40,7 @@ class ProductCategories extends React.Component {
 
         return (
             <div className="categoryList">
-                    <h3>Tuotekategoriat</h3>
+                    <h3>{texts.messages[product.categories]}</h3>
                 <ul id="categoryList">
                     <li className={this.props.taxFilters['product_cat'] == null || this.props.taxFilters['product_cat'].length < 1 ? 'selected': ''} onClick={(e) => this.handleCatClick(e, null)}>Kaikki</li>
                 {!!categories && categories.map(category =>

@@ -8,6 +8,7 @@ import {topheader, subheaders} from "../components/productTable/taxHeader";
 import {getTaxData} from "../components/productTable/taxDataCells";
 import ReactTableContainer from "react-table-container";
 import {sortProductsByName} from "../components/productList";
+import texts from "../i18n"
 
 const productTitle = product => {
     return <td><a href={product.product_url}>{product.title}</a><span style={{float: 'right'}}> <a href={product.edit_link}>Muokkaa</a></span></td>;
@@ -47,7 +48,7 @@ class ProductTable extends React.Component {
 
         return (
             <div className="productTable">
-                {error && <div>Tietojen tallennus ei onnistunut. Lataa sivu uudelleen. </div>}
+                {error && <div> { texts.messages['error.saveError']} </div>}
                 {!error &&
                 <ReactTableContainer width="auto" height="500px">
                 <table>
